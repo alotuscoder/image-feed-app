@@ -5,8 +5,8 @@ import './App.css';
 
 function App() {
   return (
-    <div>
-      <Form />
+    <div className = "wrapper">
+      <Form className = "form"/>
     </div>
   );
 }

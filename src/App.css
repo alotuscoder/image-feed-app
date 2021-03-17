@@ -1,4 +1,46 @@
-.feed-items > img {
+html {
+    background-color: rgb(11, 14, 34);
+}
+
+.wrapper {
+    padding-left: 300px;
+}
+
+.input > form input {
+    display: block;
+    width: 400px;
+    height: 25px;
+    border: none;
+}
+
+.input > form input:first-child {
+    border-bottom: 1px solid rgba(128,128,128,0.5);
+}
+
+.input > form input:last-child {
+    padding: 0px;
+}
+
+.feed-item > img {
     width: 500px;
     height: 500px;
+}
+
+.input {
+    margin-bottom: 50px;
+}
+
+.feed-item {
+    background-color: white;
+    padding: 10px;
+    max-width: 520px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.title {
+    font-family: sans-serif;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 20px;
 }

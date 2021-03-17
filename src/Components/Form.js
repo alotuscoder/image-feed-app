@@ -18,7 +18,6 @@ export default class Form extends React.Component {
         e.target.url.value = null;
         e.target.title.value = null;
         e.target.url.focus();
-        console.log(e.target);
     }
 
     // Alternative to using a controlled component, saved target event values in constants and assigned used them to set state, and made the event values null without affecting the feed data.  use this 'ref = {this.urlInput}' for enabling the following, and also these,     urlInput = createRef(); and {createRef}
@@ -29,23 +28,19 @@ export default class Form extends React.Component {
     // }
 
     render() {
-        // const {feedItems, displayItems , title} = this.state;
         const {item} = this.state;
         this.feedItems = item.map((batch, index) => <Feed title = {batch[1]} url = {batch[0]} key = {index}/>);
 
         // Added name to input's to easily access the input values instead of using target[0]
         return (
-            <div>
-            <fieldset>
+            <div className = "feed">
+            <div className = "input">
                 <form onSubmit ={this.submitData}>
-                    <input type = "text" name = "url" placeholder = "Enter image URL.."/> 
-                    {/* https://hi.com */}
-                    <input type = "text" name = "title" placeholder = "Enter title.."/>
-                    <input type = "submit" />
+                    <input type = "text" name = "url" placeholder = "Enter URL"/>
+                    <input type = "text" name = "title" placeholder = "Title"/>
+                    <input type = "submit" value = "New Post"/>
                 </form>
-
-                {/* <Feed url ={url} title = {title}/> */}
-            </fieldset>
+            </div>
             {this.feedItems}
             </div>
         );
