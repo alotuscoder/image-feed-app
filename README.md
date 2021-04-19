@@ -1,4 +1,5 @@
-
+## Image feed app
+A react application which displays images with a title as in facebook feed, upon giving the URL, and the required title.
 
 ### `npm run eject`
 
