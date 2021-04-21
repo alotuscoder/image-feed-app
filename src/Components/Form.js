@@ -44,7 +44,7 @@ export default class Form extends React.Component {
                 <form onSubmit ={this.submitData}>
                     <input type = "text" name = "url" placeholder = "Enter URL"/>
                     <input type = "text" name = "title" placeholder = "Title"/>
-                    <input type = "submit" value = "New Post"/>
+                    <input type = "submit" value = "Submit post"/>
                 </form>
             </div>
             {this.feedItems}
