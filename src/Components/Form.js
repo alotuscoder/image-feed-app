@@ -12,9 +12,15 @@ export default class Form extends React.Component {
 
     submitData(e){
         e.preventDefault();
-        const url = e.target.url.value;
         const title = e.target.title.value;
-        this.setState((st) => st.item.unshift([url, title]));
+        const url = e.target.url.value;
+        
+        if (url.match(/(jpeg|jpg|gif|png)/g) != null) {
+            this.setState((st) => st.item.unshift([url, title]));
+        }
+        else {
+            alert('Add a valid URL')
+        }
         e.target.url.value = null;
         e.target.title.value = null;
         e.target.url.focus();
